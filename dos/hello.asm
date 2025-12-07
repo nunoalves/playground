@@ -9,9 +9,9 @@ org 100h            ; .COM programs start at offset 100h
 
 mov dx, msg         ; DS:DX -> string
 mov ah, 9           ; DOS print-string function
-int 21h			    ; INT 21,9 - Print String
+int 21h             ; INT 21,9 - Print String
 
 mov ax, 4C00h       ; Exit program where ah=4Ch al=00h (return code) 
-int 21h 			; INT 21,4C - Terminate Process With Return Code
+int 21h             ; INT 21,4C - Terminate Process With Return Code
 
 msg db "Hello World!$",0
